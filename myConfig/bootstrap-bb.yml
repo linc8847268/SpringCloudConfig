@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-client
+      label: master
+      name: eureka-client
+      profile: dev
+      fail-fast: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
