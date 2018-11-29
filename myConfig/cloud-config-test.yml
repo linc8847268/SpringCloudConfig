@@ -1,2 +1,20 @@
-name=hjc123
-age=24
+server:
+  port: 8762
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      profile: test
+      discovery:
+        enabled: true
+        service-id: config-client
+  datasource:
+    url: mysql://localhost:3306/user
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
