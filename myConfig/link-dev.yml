@@ -15,3 +15,4 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+form=wqh-test 2.0
